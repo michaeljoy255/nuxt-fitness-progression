@@ -14,6 +14,7 @@ beforeEach(() => {
     },
     mocks: {
       $store: {
+        dispatch: jest.fn(),
         state: {
           ui: {
             navDrawer: false,
@@ -33,5 +34,28 @@ afterEach(() => {
 describe('Component > nav-drawer', () => {
   test('matches the snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot()
+  })
+
+  test('navDrawer computed get() returns correct values', () => {
+    let value = true
+    wrapper.vm.$store.state.ui.navDrawer = value
+    expect(wrapper.vm.navDrawer).toBe(value)
+
+    value = false
+    wrapper.vm.$store.state.ui.navDrawer = value
+    expect(wrapper.vm.navDrawer).toBe(value)
+  })
+
+  test('navDrawer computed set() dispatches action with correct values', () => {
+    const spyDispatch = jest.spyOn(wrapper.vm.$store, 'dispatch')
+    const action = 'ui/setNavDrawer'
+
+    let payload = true
+    wrapper.vm.navDrawer = payload
+    expect(spyDispatch).toHaveBeenCalledWith(action, payload)
+
+    payload = false
+    wrapper.vm.navDrawer = payload
+    expect(spyDispatch).toHaveBeenCalledWith(action, payload)
   })
 })

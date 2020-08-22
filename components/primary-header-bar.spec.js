@@ -8,12 +8,10 @@ let wrapper
 beforeEach(() => {
   const vuetify = new Vuetify()
   wrapper = mount(PrimaryHeaderBar, {
-    stubs: {},
-    propsData: {},
     mocks: {
-      $store: {},
-      $router: {},
-      $route: {},
+      $store: {
+        dispatch: jest.fn(),
+      },
     },
     localVue,
     vuetify,
@@ -27,5 +25,12 @@ afterEach(() => {
 describe('Component > primary-header-bar', () => {
   test('matches the snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot()
+  })
+
+  test('toggleNavDrawer method dispatches correct action', () => {
+    const spyDispatch = jest.spyOn(wrapper.vm.$store, 'dispatch')
+    const action = 'ui/toggleNavDrawer'
+    wrapper.vm.toggleNavDrawer()
+    expect(spyDispatch).toHaveBeenCalledWith(action)
   })
 })

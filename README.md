@@ -6,7 +6,7 @@ Linear progression based fitness tracking web application.
 
 Porting from Vue app:
 
-- Add test for drawer code in nav-drawer.vue and primary-header-bar.vue
+- Add tests for UI store module
 - Luxon dates for primary-header-bar date section
 - Start porting basic pages designs from Vue app
 
