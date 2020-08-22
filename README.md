@@ -1,6 +1,14 @@
-# Nuxt Boilerplate Project
+# Nuxt Fitness Progression Web App
 
-Vue/Nuxt boilerplate project using Vue 2.x and Nuxt 2.x
+Linear progression based fitness tracking web application.
+
+## Todo List
+
+Porting from Vue app:
+
+- Add test for drawer code in nav-drawer.vue and primary-header-bar.vue
+- Luxon dates for primary-header-bar date section
+- Start porting basic pages designs from Vue app
 
 ## Basic Build and Setup
 
