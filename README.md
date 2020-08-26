@@ -6,6 +6,9 @@ Linear progression based fitness tracking web application.
 
 Porting from Vue app:
 
+- Have base code in BP include navDrawer setup
+- Have error page default the layout to header-nav
+- WelcomePage => IndexPage on BP
 - Add tests for UI store module
 - Luxon dates for primary-header-bar date section
 - Start porting basic pages designs from Vue app
