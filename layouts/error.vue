@@ -2,7 +2,7 @@
 // Error Page is stored in layouts by Nuxt convention
 export default {
   name: 'ErrorPage',
-  layout: 'default',
+  layout: 'primary-header-nav',
   props: {
     error: {
       type: Object,
