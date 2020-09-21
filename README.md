@@ -4,6 +4,9 @@ Linear progression based fitness tracking web application.
 
 ## Todo List
 
+- Do some component planning now that you know what you want to build
+- Build a cleaner Vue 3 or Nuxt 3 boilerplate app to work from
+
 Porting from Vue app:
 
 - Fix tests for UI (mocks or spys needed?)
