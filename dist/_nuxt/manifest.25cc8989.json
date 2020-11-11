@@ -1,0 +1,10 @@
+{
+  "name": "nuxt-fitness-progression",
+  "short_name": "nuxt-fitness-progression",
+  "description": "Linear progression based fitness tracking web application.",
+  "icons": [],
+  "start_url": "/nuxt-fitness-progression/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
